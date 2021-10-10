@@ -1,0 +1,119 @@
+/* Create global variables */
+:root{
+    --mainColor:#24292e;
+    --secondaryColor: #7e5b7a;
+
+    --borderColor:#c1c1c1;
+
+    --mainText:rgb(255, 255, 255);
+    --secondaryText:#ffffff;
+
+    --themeDotBorder:#ffffff;
+
+    --previewBG: #24292e;
+
+    --buttonColor:black;
+
+}
+
+/* ----------------------------------------- */
+
+.intro-wrapper{
+
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 20px 20px 5px 1px rgb(87, 47, 64);
+    -moz-box-shadow: 20px 20px 5px 1px rgba(87, 47, 64);
+    box-shadow: 20px 20px 5px 1px rgba(87, 47, 64);
+}
+
+
+
+/* ----------------------------------------- */
+
+#preview-shadow{
+    /* width: 330px; */
+    
+
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 20px 20px 5px 1px rgb(87, 47, 64);
+    -moz-box-shadow: 20px 20px 5px 1px rgba(87, 47, 64);
+    box-shadow: 20px 20px 5px 1px rgba(87, 47, 64);
+}
+
+/* ----------------------------------------- */
+
+/* Remove underline from links and color them */
+a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 31, 124);
+}
+
+/* ----------------------------------------- */
+
+/* When hovering over the dots, change dot's border color */
+#resume:hover{
+
+    background-color: #fff;
+
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+
+}
+
+/* ----------------------------------------- */
+.music-input-field{
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid var(--borderColor);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+
+/* ----------------------------------------- */
+
+#music-submit-btn{
+  
+    margin-top: 10px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--buttonColor);
+    border: none;
+    border-radius: 5px;
+
+}
+
+/* ----------------------------------------- */
+
+#music-submit-btn:hover{
+ 
+    margin-top: 10px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 31, 124);
+    
+   
+
+      /* Create a shadow from https://www.cssmatic.com/box-shadow */
+      -webkit-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+      -moz-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+      box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+  
+
+}
+
+/* ----------------------------------------- */
+
+#horizontal-line{
+    color: #fff;
+    background-color: #fff;
+}

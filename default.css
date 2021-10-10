@@ -1,0 +1,725 @@
+/* Create global variables */
+:root{
+    --mainColor:#eaeaea;
+    --secondaryColor:#fff;
+
+    --borderColor:#c1c1c1;
+
+    --mainText:rgb(0, 0, 0);
+    --secondaryText:#4b5156;
+
+    --themeDotBorder:#24292e;
+
+    --previewBG:rgb(251, 249, 243, 0.8);
+
+    --buttonColor:black;
+
+}
+
+/* ----------------------------------------- */
+
+/* No padding or margin */
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+/* ----------------------------------------- */
+
+/* Ease the transition between color-theme clicks */
+body *{
+    transition: 0.15s;
+}
+
+/* ----------------------------------------- */
+
+/* All titles, using variables */
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--mainText);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* ----------------------------------------- */
+
+/* Other elements, using variables */
+p, li, span, lable, input, textarea{
+    color: var(--secondaryText);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+/* ----------------------------------------- */
+
+/* Remove underline from links and color them */
+a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #17a2b8;
+}
+
+/* ----------------------------------------- */
+
+/* Remove bullets from lists */
+ul{
+    list-style: none;
+}
+
+/* ----------------------------------------- */
+
+/* Pre-coded font-sizes */
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+/* ----------------------------------------- */
+
+/* Class s1 (Introduction, Portfolio) */
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+
+    /* Make sure everything is within the div */
+    overflow: auto;
+}
+
+/* ----------------------------------------- */
+
+/* Class s2 (Introduction, Portfolio) */
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+
+    /* Make sure everything is within the div */
+    overflow: auto;
+}
+
+/* ----------------------------------------- */
+
+/* Class main-container (divs) */
+.main-container{
+    width: 1200px;
+
+    /* Center everything */
+    margin: 0 auto;
+}
+
+/* ----------------------------------------- */
+
+/* S1 */
+
+/* ----------------------------------------- */
+
+.greeting-wrapper{
+    /* Create a grid area */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 15em;
+}
+
+/* ----------------------------------------- */
+
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 20px 20px 5px 1px rgba(148,78,108,1);
+    -moz-box-shadow: 20px 20px 5px 1px rgba(148,78,108,1);
+    box-shadow: 20px 20px 5px 1px rgba(148,78,108,1);
+
+    /* Create a grid area */
+    display: grid;
+
+    /* Create 2 columnns that will take 50% of the grid area each */
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 3em 30em; */
+
+    /* Description of the grid structure */
+    /* 'Nav-wrapper' will hold 2 50% slots on the top row */
+    /* 'left-column' and 'right-column' will split 50%-50% */
+    grid-template-areas: 
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+    ;
+
+}
+
+/* ----------------------------------------- */
+
+.nav-wrapper{
+
+    /* Give the grid area a name we will reference in -- intro-wrapper > grid-template-areas -- */
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+
+    /* Inline the nav elements */
+    display: flex;
+    /* Push the nav elements to 2 ends of navbar */
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--mainColor);
+    border-radius: 5px 5px 0 0;
+}
+
+/* ----------------------------------------- */
+
+#navigation{
+    margin: 0;
+    padding: 10px;
+}
+
+/* ----------------------------------------- */
+
+#navigation li{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* ----------------------------------------- */
+
+.dots-wrapper{
+    display: flex;
+    padding: 10px;
+}
+
+/* ----------------------------------------- */
+
+/* Create 3 browser dots */
+.browser-dot{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+    
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+}
+
+/* ----------------------------------------- */
+
+#dot-1{
+    background-color: #FC6058;
+}
+
+/* ----------------------------------------- */
+
+#dot-2{
+    background-color: #FEC02F;
+}
+
+
+/* ----------------------------------------- */
+
+#dot-3{
+    background-color: #2ACA3E;
+}
+
+
+/* ----------------------------------------- */
+
+.left-column{
+
+    /* Give the grid area a name we will reference in -- intro-wrapper > grid-template-areas -- */
+    grid-area: left-column;
+
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+}
+
+/* ----------------------------------------- */
+
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+    
+
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+    border-radius: 3%;
+
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+}
+
+/* ----------------------------------------- */
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* ----------------------------------------- */
+
+/* Create 3 theme dots */
+.theme-dot{
+    height: 30px;   
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+
+    /* Change cursor type upon hover */
+    cursor: pointer;
+}
+
+/* ----------------------------------------- */
+
+/* When hovering over the dots, change dot's border color */
+.theme-dot:hover{
+    border: 3px solid #eb9f12;
+}
+
+/* ----------------------------------------- */
+
+#light-mode{
+    background-color: #fff;
+}
+
+/* ----------------------------------------- */
+
+#dark-mode{
+    background-color: #24292e;
+}
+
+/* ----------------------------------------- */
+
+#pink-mode{
+    background-color: rgb(255, 31, 124);
+}
+
+/* ----------------------------------------- */
+
+/* Change note font size and location */
+#settings-note{
+    font-size: 18px;
+    text-align: center;
+}
+
+/* ----------------------------------------- */
+
+#video {
+	width:100%;
+    height:auto;
+    border: 3px solid var(--themeDotBorder);
+    border-radius: 5px;
+}
+
+/* ----------------------------------------- */
+
+.right-column{
+
+    /* Give the grid area a name we will reference in -- intro-wrapper > grid-template-areas -- */
+    grid-area: right-column;
+
+    display: grid;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+}
+
+/* ----------------------------------------- */
+
+#preview-shadow{
+    width: 330px;
+    
+
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 20px 20px 5px 1px rgba(148,78,108,1);
+    -moz-box-shadow: 20px 20px 5px 1px rgba(148,78,108,1);
+    box-shadow: 20px 20px 5px 1px rgba(148,78,108,1);
+}
+
+/* ----------------------------------------- */
+
+#preview{
+    text-align: center;
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previewBG);
+
+    padding: 15px;
+
+    position: relative;
+}
+
+/* ----------------------------------------- */
+
+#music-form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid var(--borderColor);
+    border-radius: 5px;
+    padding: 15px;
+    padding-top: 0px;
+    background-color: var(--mainColor);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+
+}
+
+/* ----------------------------------------- */
+
+.music-input-field{
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid var(--borderColor);
+    border-radius: 5px;
+    background-color: var(--secondaryColor);
+}
+
+/* ----------------------------------------- */
+
+#music-submit-btn{
+  
+    margin-top: 10px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--buttonColor);
+    border: none;
+    border-radius: 5px;
+
+}
+
+/* ----------------------------------------- */
+
+#music-submit-btn:hover{
+ 
+    margin-top: 10px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(0, 0, 0);
+    background-color: var(--borderColor);
+    
+   
+
+      /* Create a shadow from https://www.cssmatic.com/box-shadow */
+      -webkit-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+      -moz-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+      box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+  
+
+}
+
+/* ----------------------------------------- */
+
+
+/* ----------------------------------------- */
+
+.corner{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #ffffff;
+
+    position: absolute;
+}
+
+/* ----------------------------------------- */
+
+#corner-tl{
+    top: -5px;
+    left: -5px;
+}
+
+/* ----------------------------------------- */
+
+#corner-tr{
+    top: -5px;
+    right: -5px;
+}
+
+/* ----------------------------------------- */
+
+#corner-bl{
+    bottom: -5px;
+    left: -5px;
+}
+
+/* ----------------------------------------- */
+
+#corner-br{
+    bottom: -5px;
+    right: -5px;
+}
+
+/* ----------------------------------------- */
+
+/* S2 */
+
+/* ----------------------------------------- */
+
+.about-wrapper{
+    
+    /* Create a grid area */
+    display: grid;
+
+    /* Auto-fit as many columns as possible into the row.*/
+    /* Once we get to 320px, start stacking*/
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+   
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 5px;
+    gap: 50px;
+}
+
+/* ----------------------------------------- */
+
+#skills{
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+    margin-bottom: 20px;
+    background-color: #f7defd;
+}
+
+/* ----------------------------------------- */
+
+#resume{
+    position: relative;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previewBG);
+
+    padding: 15px;
+    width: 150px;
+}
+
+/* ----------------------------------------- */
+
+/* When hovering over the dots, change dot's border color */
+#resume:hover{
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+
+}
+
+/* ----------------------------------------- */
+
+.corner-resume{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #ffffff;
+
+    position: absolute;
+}
+
+/* ----------------------------------------- */
+
+#corner-tl-r{
+    top: -5px;
+    left: -5px;
+}
+
+/* ----------------------------------------- */
+
+#corner-tr-r{
+    top: -5px;
+    right: -5px;
+}
+
+/* ----------------------------------------- */
+
+#corner-bl-r{
+    bottom: -5px;
+    left: -5px;
+}
+
+/* ----------------------------------------- */
+
+#corner-br-r{
+    bottom: -5px;
+    right: -5px;
+}
+
+/* ----------------------------------------- */
+
+
+.post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+/* ----------------------------------------- */
+
+.post{
+    border: 2px solid var(--borderColor);
+
+    /* Create a shadow from https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+    box-shadow: 2px 2px 5px 0px rgba(82,69,75,1);
+}
+
+/* ----------------------------------------- */
+
+.thumbnail{
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* ----------------------------------------- */
+
+.post-preview{
+    background-color: #fff;
+    padding: 15px;
+}
+
+/* ----------------------------------------- */
+
+.post-title{
+    color:rgb(0, 0, 0);
+    margin: 0;
+}
+
+/* ----------------------------------------- */
+
+.post-intro{
+    color: #4b5156;
+}
+
+/* ----------------------------------------- */
+
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid var(--borderColor);
+    border-radius: 5px;
+    padding: 15px;
+    background-color: var(--mainColor);
+    margin-bottom: 50px;
+}
+
+/* ----------------------------------------- */
+
+#contact-form label{
+    line-height: 2em ;
+}
+
+/* ----------------------------------------- */
+
+.input-field{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid var(--borderColor);
+    border-radius: 5px;
+    background-color: var(--secondaryColor);
+}
+
+/* ----------------------------------------- */
+
+#submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    background-color: var(--buttonColor);
+    border: none;
+
+}
+
+/* ----------------------------------------- */
+/* Media queries will allow us to modify our styles depending */
+/* on particular parameters like screen width or device type */
+
+/* Make our content suitable for mobile devices */
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 90%;
+    }
+
+    .resume-title{
+        margin: 0;
+    }
+}
+
+/* ----------------------------------------- */
+
+/* Media queries will allow us to modify our styles depending */
+/* on particular parameters like screen width or device type */
+
+/* Make our content suitable for mobile devices */
+@media screen and (max-width: 850px){
+    
+    .intro-wrapper{
+    
+        /* Create 2 columnns that will take 50% of the grid area each */
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 3em 30em; */
+    
+        /* Description of the grid structure */
+        /* 'Nav-wrapper' will hold 2 50% slots on the top row */
+        /* 'left-column' and 'right-column' will split 50%-50% */
+        grid-template-areas: 
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    
+    }
+
+    .right-column{
+        justify-content: center;
+    }
+
+    .about-me{
+        margin-right: 10px;
+        /* padding: 15px; */
+    }
+
+    .resume-title{
+        margin: 0;
+    }
+}
+
+/* ----------------------------------------- */
